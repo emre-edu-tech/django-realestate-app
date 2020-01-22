@@ -10,6 +10,7 @@ db.sqlite3-journal
 # Added virtual environment
 python-app-venv
 /static
+schema.txt
 
 # Visual Studio Code
 .vscode
