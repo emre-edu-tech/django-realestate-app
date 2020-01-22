@@ -6,10 +6,10 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-media/
+/media
 # Added virtual environment
 python-app-venv
-static/
+/static
 
 # Visual Studio Code
 .vscode
