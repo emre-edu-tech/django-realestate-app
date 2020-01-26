@@ -4,12 +4,17 @@ from django.http import HttpResponse
 from listings.models import Listing
 # get Realtor model
 from realtors.models import Realtor
+# get the search fields from choices file
+from listings.choices import price_choices, bedroom_choices, state_choices
 
 def index(request):
     # [:3] means limit to 3 listings
     listings = Listing.objects.order_by('-id').filter(is_published=True)[:3]
     data = {
-        'listings': listings
+        'listings': listings,
+        'state_choices': state_choices,
+        'price_choices': price_choices,
+        'bedroom_choices': bedroom_choices
     }
     return render(request, 'pages/index.html', data)
 
